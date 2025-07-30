@@ -70,8 +70,8 @@ return(
   <div style={{margin:"20px"}}>
       <Header/>
       <div style={{marginTop:"10px"}}>
-      <h1 style={{color:"grey"}}>{dealer.full_name}{postReview}</h1>
-      <h4  style={{color:"grey"}}>{dealer['city']},{dealer['address']}, Zip - {dealer['zip']}, {dealer['state']} </h4>
+      <h1 style={{color:"grey"}}>Fix San Car Dealership{postReview}</h1>
+      <h4  style={{color:"grey"}}>San Francisco, 9 Harper Circle, Zip - 94110, California </h4>
       </div>
       <div class="reviews_panel">
       {reviews.length === 0 && unreviewed === false ? (
@@ -84,6 +84,11 @@ return(
           <div className="reviewer">{review.name} {review.car_make} {review.car_model} {review.car_year}</div>
         </div>
       ))}
+      <div className='review_panel'>
+          <img src={senti_icon("positive")} className="emotion_icon" alt='Sentiment'/>
+          <div className='review'>excellent dealership, would recommend</div>
+          <div className="reviewer">root Audi A6 2019</div>
+        </div>
     </div>  
   </div>
 )
